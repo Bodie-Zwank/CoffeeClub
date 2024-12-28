@@ -1,16 +1,50 @@
+.slogan {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 100%;
+    font-family: sans-serif;
+}
+
+.slogan-image {
+    position: relative;
+    overflow: hidden; /* Ensures the cropped parts of the image are hidden */
+    height: 700px; /* Set the desired height for the visible portion of the image */
+    width: 100%; /* Ensure it spans the full container width */
+}
+
+.slogan-image img {
+    width: 100%; /* Ensures the image is responsive */
+    height: auto;
+    position: absolute;
+    top: -10%; /* Adjusts the visible portion of the image */
+    object-fit: cover;
+}
+
+.slogan h1 {
+    position: absolute;
+    color: white; /* Use a color that contrasts with the image */
+    font-size: 2rem; /* Adjust font size as needed */
+    margin-left: 5rem;
+    text-align: center;
+    font-style: italic;
+}
 
 .product-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
-    font-family: source-code-pro, monospace;
+    flex-wrap: wrap; /* Allows items to wrap to the next row */
+    justify-content: space-between; /* Ensures even distribution with small gaps */
+    gap: 1rem; /* Spacing between the product boxes */
+    margin: 2rem; /* Space around the product container */
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .product {
-    flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width of 300px */
-    max-width: 300px; /* Ensures products don't stretch too wide */
+    flex: 1 1 calc(25% - 1rem); /* Each product takes up 25% minus the gap */
+    max-width: calc(25% - 1rem); /* Prevents stretching beyond 25% of the container width */
+    box-sizing: border-box; /* Includes padding and margin in width calculations */
     text-align: center;
     border: 1px solid #ddd;
     padding: 1rem;
@@ -18,9 +52,28 @@
     background-color: #fff;
 }
 
+
 .product img {
     width: 100%; /* Makes the image responsive */
     height: auto;
     border-bottom: 1px solid #ddd;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .product {
+        flex: 1 1 calc(33.333% - 1rem); /* 3 products per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 1rem); /* 2 products per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 calc(100% - 1rem); /* 1 product per row on extra-small screens */
+    }
 }
