@@ -2,7 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: courier-new;
 }
 
 .site-header {
@@ -83,7 +83,7 @@ body, html {
   text-decoration: none;
   color: rgb(0, 0, 0);
   font-family: courier-new;
-  font-size: medium;
+  font-size: small;
   font-weight: 100;
   gap: 0.25rem;
   padding: 0 5px;
@@ -96,8 +96,8 @@ body, html {
 
 /* Icon size */
 .nav-icon {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   max-width: 100%;
   display: block;
   margin: 0 auto;
