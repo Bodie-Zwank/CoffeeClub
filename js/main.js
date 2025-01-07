@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Determine the correct path prefix (if in subdirectory)
     let pathPrefix = window.location.pathname.includes("/pages/") ? "../" : "";
 
-    // Load header
-    fetch(`${pathPrefix}partials/heading.html`)
+    // Load Header
+    fetch(`${pathPrefix}partials/header.html`)
         .then(response => {
             if (!response.ok) {
                 throw new Error("Network response was not ok");
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Error fetching header:", error);
         });
 
-    // Load footer
+    // Load Footer
     fetch(`${pathPrefix}partials/footer.html`)
         .then(response => {
             if (!response.ok) {
