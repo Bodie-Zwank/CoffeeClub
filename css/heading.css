@@ -1,7 +1,7 @@
 /* Remove default margin/padding from html/body */
 body, html {
     margin: 0;
-    padding: 0;
+    padding-top: 40px;
     font-family: courier-new;
 }
 
@@ -10,6 +10,7 @@ body, html {
   top: 0;
   z-index: 1000;
   width: 100%; /* Ensures full-width alignment */
+  height: 90px;
   background-color: #c0c0c0;
   color: white;
   border-bottom: 1px solid black;
@@ -127,12 +128,4 @@ body, html {
 
 .checkout-btn:hover {
   box-shadow: 2px 2px;
-}
-
-/* Responsive adjustments for very small screens */
-@media (max-width: 600px) {
-  .nav-icon {
-    width: 2rem;  /* smaller icons on mobile */
-    height: 2rem;
-  }
 }
