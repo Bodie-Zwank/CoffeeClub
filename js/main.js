@@ -1,32 +1,33 @@
-// For implementing header html on main page
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('partials/heading.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('header').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
-});
+    let pathPrefix = window.location.pathname.includes("/pages/") ? "../" : "";
 
-document.addEventListener("DOMContentLoaded", function () {
-    fetch('partials/footer.html')
+    // Load Header
+    fetch(`${pathPrefix}partials/header.html`)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error("Network response was not ok");
             }
             return response.text();
         })
         .then(data => {
-            document.getElementById('footer').innerHTML = data;
+            document.getElementById("header").innerHTML = data;
         })
         .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
+            console.error("Error fetching header:", error);
+        });
+
+    // Load Footer
+    fetch(`${pathPrefix}partials/footer.html`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error fetching footer:", error);
         });
 });
