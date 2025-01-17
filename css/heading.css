@@ -128,11 +128,3 @@ body, html {
 .checkout-btn:hover {
   box-shadow: 2px 2px;
 }
-
-/* Responsive adjustments for very small screens */
-@media (max-width: 600px) {
-  .nav-icon {
-    width: 2rem;  /* smaller icons on mobile */
-    height: 2rem;
-  }
-}

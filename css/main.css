@@ -104,23 +104,3 @@
     gap: 1rem; /* Adds space between buttons */
     z-index: 3;
 }
-
-
-
-@media (max-width: 1024px) {
-    .product {
-        flex: 1 1 calc(33.333% - 1rem); /* 3 products per row on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .product {
-        flex: 1 1 calc(50% - 1rem); /* 2 products per row on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .product {
-        flex: 1 1 calc(100% - 1rem); /* 1 product per row on extra-small screens */
-    }
-}
