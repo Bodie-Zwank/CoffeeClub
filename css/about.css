@@ -1,0 +1,10 @@
+.story-container {
+    font-family:'Courier New', Courier, monospace;
+    height: 600px;
+    padding-left: 20px;
+}
+
+.about-title {
+    font-family:'Courier New', Courier, monospace;
+    padding: 20px;
+}
