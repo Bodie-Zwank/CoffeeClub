@@ -72,7 +72,7 @@
 
 .product h2 {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -83,6 +83,9 @@
 }
 
 .product .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     position: absolute;
     bottom: 15px;
     left: 50%;
